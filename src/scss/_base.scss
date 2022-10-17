@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Inter:wght@500&family=Josefin+Sans:ital,wght@0,500;1,400&family=Kodchasan:wght@700&family=Lexend:wght@200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,800;1,400;1,500;1,800&family=Pacifico&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:ital,wght@0,500;0,700;1,400;1,500;1,700&family=Varela+Round&display=swap");
+// varaibles
+$b-color: #0c0c0c;
+$pr-color: #fd2155;
+
+$w-color: #fafafa;
+$pr-font: "Poppins", sans-serif;
+$sc-font: "Pacifico", sans-serif;
+
+//medais
+$m-mb: "max-width: 480px";
+$m-md: "max-width: 768px";
+button {
+  border: none;
+  outline: none;
+}
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+// $colors: (
+//   slide: #8fc866,
+// );
+// @each $button, $color in $colors {
+//   .#{$button} {
+//     --color: #{$color};
+//     --hover: #{adjust-hue($color, 45deg)};
+//   }
+// }
+button.main {
+  color: $pr-color;
+  font-family: $pr-font;
+  font-weight: 600;
+  width: 8rem;
+  transition: 0.25s;
+  height: 2.8rem;
+  border: $pr-color solid 3px;
+  background-color: transparent;
+  transition: 0.5s;
+  &:hover {
+    color: $w-color;
+    box-shadow: inset 8em 0 0 0 $pr-color !important;
+  }
+  &#change {
+    color: $w-color;
+    border-color: $w-color;
+    &:hover {
+      color: $pr-color;
+      box-shadow: inset 7.5em 0 0 0 $w-color !important;
+    }
+  }
+  @media ($m-mb) {
+    width: 6rem;
+  }
+}
+
+// my body
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: $pr-font;
+  box-sizing: border-box;
+  background-color: $w-color;
+  color: black;
+  // text-transform: capitalize;
+  font-family: $pr-font;
+}
+
+// mixins
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: $pr-color;
+  }
+}
+.circle {
+  border-radius: 50%;
+}
+.pr-color {
+  background-color: $pr-color;
+}
+.pr-font {
+  font-family: $pr-font;
+}
+.b-color {
+  background-color: $b-color;
+  color: $w-color;
+  z-index: 101;
+  img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center {
+  @include flex-center();
+}
+
+// scrool bar customation
+
+// /* width */
+// ::-webkit-scrollbar {
+//   cursor: pointer;
+//   width: 8px;
+// }
+// // /* Track */
+// ::-webkit-scrollbar-track {
+//   border-radius: 15px;
+//   background: transparent;
+//   padding-right: 4px;
+// }
+
+// // /* Handle */
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 15px;
+//   padding-right: 4px;
+// background: $pr-color;
+// }
+
+// // /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+// background: $red-color;
+// }
+
+// // custom selection
+
+// *::selection {
+//   background-color: $pr-color !important;
+//   color: white !important;
+// }

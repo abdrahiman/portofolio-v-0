@@ -1,0 +1,124 @@
+.skills {
+  background-color: $w-color;
+  width: 100%;
+  height: 100vh;
+  color: $b-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media ($m-md) {
+    height: fit-content;
+  }
+  main {
+    width: 80%;
+    position: relative;
+    height: 83vh;
+    color: $b-color;
+    display: flex;
+    align-items: flex-start;
+    z-index: 9;
+    justify-content: flex-start;
+    padding: 2rem 8rem;
+    // flex-wrap: wrap;
+    gap: 3rem;
+    @media ($m-md) {
+      padding: 2rem 1rem;
+      height: fit-content;
+      gap: 0rem;
+      width: 90%;
+      margin-top: 5rem;
+      flex-direction: column;
+    }
+    .box {
+      border: solid 5px $b-color;
+      position: relative;
+      height: 100%;
+      padding: 3%;
+      width: 50%;
+      min-width: 15rem;
+      img {
+        width: 100%;
+        object-fit: cover;
+        max-height: 100%;
+      }
+      .imghand {
+        overflow: hidden;
+        max-height: 12rem;
+        width: 100%;
+        border-radius: 10px;
+        @media ($m-mb) {
+          max-height: 14rem;
+        }
+      }
+      @media ($m-md) {
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 2rem;
+      }
+      .text > div {
+        letter-spacing: 0.01em;
+        font-weight: 500;
+      }
+      h3 {
+        font-weight: 700;
+        text-transform: capitalize;
+        text-align: center;
+        letter-spacing: 0.01em;
+        margin-bottom: 1.5rem;
+      }
+      h4 {
+        font-weight: 600;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 28px;
+        /* or 193% */
+        letter-spacing: 0.01em;
+        color: $b-color;
+      }
+    }
+  }
+  h2 {
+    position: absolute;
+    font-weight: 800;
+    font-size: 8rem;
+    right: 0;
+    z-index: 1;
+    bottom: 0;
+    // line-height: 156px;
+    // text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(66, 66, 66, 0.14);
+    @media ($m-mb) {
+      font-size: 6rem;
+    }
+  }
+  .medai {
+    .line {
+      background-color: $b-color;
+    }
+    svg {
+      color: $b-color;
+    }
+  }
+  .email {
+    z-index: 5;
+    a {
+      color: $b-color;
+      &:hover {
+        color: $pr-color;
+        font-weight: 600;
+      }
+    }
+    .line {
+      background-color: $b-color;
+    }
+  }
+  // overflow: hidden;
+}

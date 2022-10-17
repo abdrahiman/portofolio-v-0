@@ -1,0 +1,87 @@
+.contact {
+  @extend .about;
+  main {
+    align-items: center;
+  }
+
+  h2 {
+    position: relative !important;
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 120px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(213, 213, 213, 0.14) !important;
+    // color: $pr-color !important;
+    top: -1rem;
+    text-align: start;
+    width: 100%;
+    // font-family: $sc-font;
+    margin-bottom: 2rem;
+    transition: all 1s ease-in;
+
+    // -webkit-text-stroke: 1px red;
+    @media ($m-mb) {
+      font-size: 4rem !important;
+      line-height: 32px;
+    }
+  }
+  .hand1,
+  .hand2 {
+    width: 48%;
+    position: relative;
+    @media ($m-md) {
+      width: 100%;
+    }
+  }
+  input,
+  #message {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: none;
+    padding: 1rem 1rem;
+    width: 100% !important;
+    height: 100% !important;
+    &::placeholder {
+      color: #c1c1c1;
+    }
+    &:focus + .underlineAnime {
+      // transform: scale(1);
+      width: 100%;
+    }
+  }
+  .nah {
+    height: 10rem;
+    max-height: 30rem;
+    min-width: 100%;
+    position: relative;
+  }
+  .underlineAnime {
+    background-color: $pr-color;
+    display: inline-block;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // -webkit-transform: scale(0, 1);
+    // transform: scale(0, 1);
+    // -webkit-transition: all 0.5s linear;
+    width: 0%;
+    transition: all 0.5s linear;
+  }
+  img {
+    z-index: -2;
+  }
+  z-index: 4;
+  .handllar {
+    flex-wrap: wrap;
+    input {
+      width: 48%;
+      @media ($m-md) {
+        width: 100%;
+      }
+    }
+  }
+  form {
+    width: 100%;
+  }
+}

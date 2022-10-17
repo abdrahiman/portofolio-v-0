@@ -1,0 +1,2157 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&family=Inter:wght@500&family=Josefin+Sans:ital,wght@0,500;1,400&family=Kodchasan:wght@700&family=Lexend:wght@200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,500;0,800;1,400;1,500;1,800&family=Pacifico&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:ital,wght@0,500;0,700;1,400;1,500;1,700&family=Varela+Round&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+button {
+  border: none;
+  outline: none;
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button.main {
+  color: #fd2155;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  width: 8rem;
+  transition: 0.25s;
+  height: 2.8rem;
+  border: #fd2155 solid 3px;
+  background-color: transparent;
+  transition: 0.5s;
+}
+button.main:hover {
+  color: #fafafa;
+  box-shadow: inset 8em 0 0 0 #fd2155 !important;
+}
+button.main#change {
+  color: #fafafa;
+  border-color: #fafafa;
+}
+button.main#change:hover {
+  color: #fd2155;
+  box-shadow: inset 7.5em 0 0 0 #fafafa !important;
+}
+@media (max-width: 480px) {
+  button.main {
+    width: 6rem;
+  }
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: #fd2155;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.pr-color {
+  background-color: #fd2155;
+}
+
+.pr-font {
+  font-family: "Poppins", sans-serif;
+}
+
+.b-color {
+  background-color: #0c0c0c;
+  color: #fafafa;
+  z-index: 101;
+}
+.b-color img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0 10%;
+}
+nav .name {
+  font-family: "Pacifico", sans-serif;
+  color: #fafafa;
+  font-size: 1.3rem;
+}
+nav .toggel {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.boxs {
+  width: 100%;
+  height: 0vh;
+  display: grid;
+  position: fixed;
+  z-index: 99;
+  grid-template-columns: repeat(4, auto);
+}
+.boxs > div {
+  background-color: #fd2155;
+  z-index: 5;
+  height: 0%;
+}
+.boxs .b1 {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.boxs .b2 {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.boxs .b3 {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+.boxs .b4 {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+#showBoxs {
+  display: grid;
+  height: 100vh;
+}
+#showBoxs > div {
+  height: 0%;
+  -webkit-animation-name: menu-down;
+  animation-name: menu-down;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#hideNav {
+  height: 100vh;
+}
+#hideNav > div {
+  height: 100%;
+  -webkit-animation-name: menu-up;
+  animation-name: menu-up;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+#remove {
+  display: none;
+  height: 0vh;
+}
+#remove > div {
+  height: 0;
+}
+
+.real-nav {
+  position: relative;
+  position: fixed;
+  left: 8%;
+  transition: 1s ease-in-out;
+  z-index: 145;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 3rem 12rem;
+  padding-left: 2;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 110px;
+  justify-content: space-between;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@media (max-width: 480px) {
+  .real-nav {
+    padding: 0;
+    left: 0;
+    gap: 70px;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.real-nav ul {
+  padding: 0;
+  margin: 0;
+}
+.real-nav ul li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+@media (max-width: 480px) {
+  .real-nav ul li {
+    text-align: center;
+  }
+}
+.real-nav li a {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 9rem;
+  line-height: 147px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 60px;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-decoration: none;
+}
+.real-nav li a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 7px;
+  bottom: 0;
+  left: 0;
+  background-color: #0c0c0c;
+  transform-origin: bottom right;
+  transition: transform 0.45s ease-in-out;
+}
+.real-nav li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+@media (max-width: 480px) {
+  .real-nav li a {
+    text-align: center;
+  }
+}
+.real-nav .web svg {
+  color: white;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.real-nav h3 {
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 34px;
+  letter-spacing: 0.12em;
+  text-transform: capitalize;
+  color: #000000;
+}
+@media (max-width: 480px) {
+  .real-nav h3 {
+    text-align: center;
+  }
+}
+
+@-webkit-keyframes menu-down {
+  0% {
+    height: 0%;
+  }
+  1% {
+    height: 1%;
+  }
+  2% {
+    height: 2%;
+  }
+  3% {
+    height: 3%;
+  }
+  4% {
+    height: 4%;
+  }
+  5% {
+    height: 5%;
+  }
+  6% {
+    height: 6%;
+  }
+  7% {
+    height: 7%;
+  }
+  8% {
+    height: 8%;
+  }
+  9% {
+    height: 9%;
+  }
+  10% {
+    height: 10%;
+  }
+  11% {
+    height: 11%;
+  }
+  12% {
+    height: 12%;
+  }
+  13% {
+    height: 13%;
+  }
+  14% {
+    height: 14%;
+  }
+  15% {
+    height: 15%;
+  }
+  16% {
+    height: 16%;
+  }
+  17% {
+    height: 17%;
+  }
+  18% {
+    height: 18%;
+  }
+  19% {
+    height: 19%;
+  }
+  20% {
+    height: 20%;
+  }
+  21% {
+    height: 21%;
+  }
+  22% {
+    height: 22%;
+  }
+  23% {
+    height: 23%;
+  }
+  24% {
+    height: 24%;
+  }
+  25% {
+    height: 25%;
+  }
+  26% {
+    height: 26%;
+  }
+  27% {
+    height: 27%;
+  }
+  28% {
+    height: 28%;
+  }
+  29% {
+    height: 29%;
+  }
+  30% {
+    height: 30%;
+  }
+  31% {
+    height: 31%;
+  }
+  32% {
+    height: 32%;
+  }
+  33% {
+    height: 33%;
+  }
+  34% {
+    height: 34%;
+  }
+  35% {
+    height: 35%;
+  }
+  36% {
+    height: 36%;
+  }
+  37% {
+    height: 37%;
+  }
+  38% {
+    height: 38%;
+  }
+  39% {
+    height: 39%;
+  }
+  40% {
+    height: 40%;
+  }
+  41% {
+    height: 41%;
+  }
+  42% {
+    height: 42%;
+  }
+  43% {
+    height: 43%;
+  }
+  44% {
+    height: 44%;
+  }
+  45% {
+    height: 45%;
+  }
+  46% {
+    height: 46%;
+  }
+  47% {
+    height: 47%;
+  }
+  48% {
+    height: 48%;
+  }
+  49% {
+    height: 49%;
+  }
+  50% {
+    height: 50%;
+  }
+  51% {
+    height: 51%;
+  }
+  52% {
+    height: 52%;
+  }
+  53% {
+    height: 53%;
+  }
+  54% {
+    height: 54%;
+  }
+  55% {
+    height: 55%;
+  }
+  56% {
+    height: 56%;
+  }
+  57% {
+    height: 57%;
+  }
+  58% {
+    height: 58%;
+  }
+  59% {
+    height: 59%;
+  }
+  60% {
+    height: 60%;
+  }
+  61% {
+    height: 61%;
+  }
+  62% {
+    height: 62%;
+  }
+  63% {
+    height: 63%;
+  }
+  64% {
+    height: 64%;
+  }
+  65% {
+    height: 65%;
+  }
+  66% {
+    height: 66%;
+  }
+  67% {
+    height: 67%;
+  }
+  68% {
+    height: 68%;
+  }
+  69% {
+    height: 69%;
+  }
+  70% {
+    height: 70%;
+  }
+  71% {
+    height: 71%;
+  }
+  72% {
+    height: 72%;
+  }
+  73% {
+    height: 73%;
+  }
+  74% {
+    height: 74%;
+  }
+  75% {
+    height: 75%;
+  }
+  76% {
+    height: 76%;
+  }
+  77% {
+    height: 77%;
+  }
+  78% {
+    height: 78%;
+  }
+  79% {
+    height: 79%;
+  }
+  80% {
+    height: 80%;
+  }
+  81% {
+    height: 81%;
+  }
+  82% {
+    height: 82%;
+  }
+  83% {
+    height: 83%;
+  }
+  84% {
+    height: 84%;
+  }
+  85% {
+    height: 85%;
+  }
+  86% {
+    height: 86%;
+  }
+  87% {
+    height: 87%;
+  }
+  88% {
+    height: 88%;
+  }
+  89% {
+    height: 89%;
+  }
+  90% {
+    height: 90%;
+  }
+  91% {
+    height: 91%;
+  }
+  92% {
+    height: 92%;
+  }
+  93% {
+    height: 93%;
+  }
+  94% {
+    height: 94%;
+  }
+  95% {
+    height: 95%;
+  }
+  96% {
+    height: 96%;
+  }
+  97% {
+    height: 97%;
+  }
+  98% {
+    height: 98%;
+  }
+  99% {
+    height: 99%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes menu-down {
+  0% {
+    height: 0%;
+  }
+  1% {
+    height: 1%;
+  }
+  2% {
+    height: 2%;
+  }
+  3% {
+    height: 3%;
+  }
+  4% {
+    height: 4%;
+  }
+  5% {
+    height: 5%;
+  }
+  6% {
+    height: 6%;
+  }
+  7% {
+    height: 7%;
+  }
+  8% {
+    height: 8%;
+  }
+  9% {
+    height: 9%;
+  }
+  10% {
+    height: 10%;
+  }
+  11% {
+    height: 11%;
+  }
+  12% {
+    height: 12%;
+  }
+  13% {
+    height: 13%;
+  }
+  14% {
+    height: 14%;
+  }
+  15% {
+    height: 15%;
+  }
+  16% {
+    height: 16%;
+  }
+  17% {
+    height: 17%;
+  }
+  18% {
+    height: 18%;
+  }
+  19% {
+    height: 19%;
+  }
+  20% {
+    height: 20%;
+  }
+  21% {
+    height: 21%;
+  }
+  22% {
+    height: 22%;
+  }
+  23% {
+    height: 23%;
+  }
+  24% {
+    height: 24%;
+  }
+  25% {
+    height: 25%;
+  }
+  26% {
+    height: 26%;
+  }
+  27% {
+    height: 27%;
+  }
+  28% {
+    height: 28%;
+  }
+  29% {
+    height: 29%;
+  }
+  30% {
+    height: 30%;
+  }
+  31% {
+    height: 31%;
+  }
+  32% {
+    height: 32%;
+  }
+  33% {
+    height: 33%;
+  }
+  34% {
+    height: 34%;
+  }
+  35% {
+    height: 35%;
+  }
+  36% {
+    height: 36%;
+  }
+  37% {
+    height: 37%;
+  }
+  38% {
+    height: 38%;
+  }
+  39% {
+    height: 39%;
+  }
+  40% {
+    height: 40%;
+  }
+  41% {
+    height: 41%;
+  }
+  42% {
+    height: 42%;
+  }
+  43% {
+    height: 43%;
+  }
+  44% {
+    height: 44%;
+  }
+  45% {
+    height: 45%;
+  }
+  46% {
+    height: 46%;
+  }
+  47% {
+    height: 47%;
+  }
+  48% {
+    height: 48%;
+  }
+  49% {
+    height: 49%;
+  }
+  50% {
+    height: 50%;
+  }
+  51% {
+    height: 51%;
+  }
+  52% {
+    height: 52%;
+  }
+  53% {
+    height: 53%;
+  }
+  54% {
+    height: 54%;
+  }
+  55% {
+    height: 55%;
+  }
+  56% {
+    height: 56%;
+  }
+  57% {
+    height: 57%;
+  }
+  58% {
+    height: 58%;
+  }
+  59% {
+    height: 59%;
+  }
+  60% {
+    height: 60%;
+  }
+  61% {
+    height: 61%;
+  }
+  62% {
+    height: 62%;
+  }
+  63% {
+    height: 63%;
+  }
+  64% {
+    height: 64%;
+  }
+  65% {
+    height: 65%;
+  }
+  66% {
+    height: 66%;
+  }
+  67% {
+    height: 67%;
+  }
+  68% {
+    height: 68%;
+  }
+  69% {
+    height: 69%;
+  }
+  70% {
+    height: 70%;
+  }
+  71% {
+    height: 71%;
+  }
+  72% {
+    height: 72%;
+  }
+  73% {
+    height: 73%;
+  }
+  74% {
+    height: 74%;
+  }
+  75% {
+    height: 75%;
+  }
+  76% {
+    height: 76%;
+  }
+  77% {
+    height: 77%;
+  }
+  78% {
+    height: 78%;
+  }
+  79% {
+    height: 79%;
+  }
+  80% {
+    height: 80%;
+  }
+  81% {
+    height: 81%;
+  }
+  82% {
+    height: 82%;
+  }
+  83% {
+    height: 83%;
+  }
+  84% {
+    height: 84%;
+  }
+  85% {
+    height: 85%;
+  }
+  86% {
+    height: 86%;
+  }
+  87% {
+    height: 87%;
+  }
+  88% {
+    height: 88%;
+  }
+  89% {
+    height: 89%;
+  }
+  90% {
+    height: 90%;
+  }
+  91% {
+    height: 91%;
+  }
+  92% {
+    height: 92%;
+  }
+  93% {
+    height: 93%;
+  }
+  94% {
+    height: 94%;
+  }
+  95% {
+    height: 95%;
+  }
+  96% {
+    height: 96%;
+  }
+  97% {
+    height: 97%;
+  }
+  98% {
+    height: 98%;
+  }
+  99% {
+    height: 99%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@-webkit-keyframes menu-up {
+  0% {
+    height: 100%;
+  }
+  1% {
+    height: 99%;
+  }
+  2% {
+    height: 98%;
+  }
+  3% {
+    height: 97%;
+  }
+  4% {
+    height: 96%;
+  }
+  5% {
+    height: 95%;
+  }
+  6% {
+    height: 94%;
+  }
+  7% {
+    height: 93%;
+  }
+  8% {
+    height: 92%;
+  }
+  9% {
+    height: 91%;
+  }
+  10% {
+    height: 90%;
+  }
+  11% {
+    height: 89%;
+  }
+  12% {
+    height: 88%;
+  }
+  13% {
+    height: 87%;
+  }
+  14% {
+    height: 86%;
+  }
+  15% {
+    height: 85%;
+  }
+  16% {
+    height: 84%;
+  }
+  17% {
+    height: 83%;
+  }
+  18% {
+    height: 82%;
+  }
+  19% {
+    height: 81%;
+  }
+  20% {
+    height: 80%;
+  }
+  21% {
+    height: 79%;
+  }
+  22% {
+    height: 78%;
+  }
+  23% {
+    height: 77%;
+  }
+  24% {
+    height: 76%;
+  }
+  25% {
+    height: 75%;
+  }
+  26% {
+    height: 74%;
+  }
+  27% {
+    height: 73%;
+  }
+  28% {
+    height: 72%;
+  }
+  29% {
+    height: 71%;
+  }
+  30% {
+    height: 70%;
+  }
+  31% {
+    height: 69%;
+  }
+  32% {
+    height: 68%;
+  }
+  33% {
+    height: 67%;
+  }
+  34% {
+    height: 66%;
+  }
+  35% {
+    height: 65%;
+  }
+  36% {
+    height: 64%;
+  }
+  37% {
+    height: 63%;
+  }
+  38% {
+    height: 62%;
+  }
+  39% {
+    height: 61%;
+  }
+  40% {
+    height: 60%;
+  }
+  41% {
+    height: 59%;
+  }
+  42% {
+    height: 58%;
+  }
+  43% {
+    height: 57%;
+  }
+  44% {
+    height: 56%;
+  }
+  45% {
+    height: 55%;
+  }
+  46% {
+    height: 54%;
+  }
+  47% {
+    height: 53%;
+  }
+  48% {
+    height: 52%;
+  }
+  49% {
+    height: 51%;
+  }
+  50% {
+    height: 50%;
+  }
+  51% {
+    height: 49%;
+  }
+  52% {
+    height: 48%;
+  }
+  53% {
+    height: 47%;
+  }
+  54% {
+    height: 46%;
+  }
+  55% {
+    height: 45%;
+  }
+  56% {
+    height: 44%;
+  }
+  57% {
+    height: 43%;
+  }
+  58% {
+    height: 42%;
+  }
+  59% {
+    height: 41%;
+  }
+  60% {
+    height: 40%;
+  }
+  61% {
+    height: 39%;
+  }
+  62% {
+    height: 38%;
+  }
+  63% {
+    height: 37%;
+  }
+  64% {
+    height: 36%;
+  }
+  65% {
+    height: 35%;
+  }
+  66% {
+    height: 34%;
+  }
+  67% {
+    height: 33%;
+  }
+  68% {
+    height: 32%;
+  }
+  69% {
+    height: 31%;
+  }
+  70% {
+    height: 30%;
+  }
+  71% {
+    height: 29%;
+  }
+  72% {
+    height: 28%;
+  }
+  73% {
+    height: 27%;
+  }
+  74% {
+    height: 26%;
+  }
+  75% {
+    height: 25%;
+  }
+  76% {
+    height: 24%;
+  }
+  77% {
+    height: 23%;
+  }
+  78% {
+    height: 22%;
+  }
+  79% {
+    height: 21%;
+  }
+  80% {
+    height: 20%;
+  }
+  81% {
+    height: 19%;
+  }
+  82% {
+    height: 18%;
+  }
+  83% {
+    height: 17%;
+  }
+  84% {
+    height: 16%;
+  }
+  85% {
+    height: 15%;
+  }
+  86% {
+    height: 14%;
+  }
+  87% {
+    height: 13%;
+  }
+  88% {
+    height: 12%;
+  }
+  89% {
+    height: 11%;
+  }
+  90% {
+    height: 10%;
+  }
+  91% {
+    height: 9%;
+  }
+  92% {
+    height: 8%;
+  }
+  93% {
+    height: 7%;
+  }
+  94% {
+    height: 6%;
+  }
+  95% {
+    height: 5%;
+  }
+  96% {
+    height: 4%;
+  }
+  97% {
+    height: 3%;
+  }
+  98% {
+    height: 2%;
+  }
+  99% {
+    height: 1%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+@keyframes menu-up {
+  0% {
+    height: 100%;
+  }
+  1% {
+    height: 99%;
+  }
+  2% {
+    height: 98%;
+  }
+  3% {
+    height: 97%;
+  }
+  4% {
+    height: 96%;
+  }
+  5% {
+    height: 95%;
+  }
+  6% {
+    height: 94%;
+  }
+  7% {
+    height: 93%;
+  }
+  8% {
+    height: 92%;
+  }
+  9% {
+    height: 91%;
+  }
+  10% {
+    height: 90%;
+  }
+  11% {
+    height: 89%;
+  }
+  12% {
+    height: 88%;
+  }
+  13% {
+    height: 87%;
+  }
+  14% {
+    height: 86%;
+  }
+  15% {
+    height: 85%;
+  }
+  16% {
+    height: 84%;
+  }
+  17% {
+    height: 83%;
+  }
+  18% {
+    height: 82%;
+  }
+  19% {
+    height: 81%;
+  }
+  20% {
+    height: 80%;
+  }
+  21% {
+    height: 79%;
+  }
+  22% {
+    height: 78%;
+  }
+  23% {
+    height: 77%;
+  }
+  24% {
+    height: 76%;
+  }
+  25% {
+    height: 75%;
+  }
+  26% {
+    height: 74%;
+  }
+  27% {
+    height: 73%;
+  }
+  28% {
+    height: 72%;
+  }
+  29% {
+    height: 71%;
+  }
+  30% {
+    height: 70%;
+  }
+  31% {
+    height: 69%;
+  }
+  32% {
+    height: 68%;
+  }
+  33% {
+    height: 67%;
+  }
+  34% {
+    height: 66%;
+  }
+  35% {
+    height: 65%;
+  }
+  36% {
+    height: 64%;
+  }
+  37% {
+    height: 63%;
+  }
+  38% {
+    height: 62%;
+  }
+  39% {
+    height: 61%;
+  }
+  40% {
+    height: 60%;
+  }
+  41% {
+    height: 59%;
+  }
+  42% {
+    height: 58%;
+  }
+  43% {
+    height: 57%;
+  }
+  44% {
+    height: 56%;
+  }
+  45% {
+    height: 55%;
+  }
+  46% {
+    height: 54%;
+  }
+  47% {
+    height: 53%;
+  }
+  48% {
+    height: 52%;
+  }
+  49% {
+    height: 51%;
+  }
+  50% {
+    height: 50%;
+  }
+  51% {
+    height: 49%;
+  }
+  52% {
+    height: 48%;
+  }
+  53% {
+    height: 47%;
+  }
+  54% {
+    height: 46%;
+  }
+  55% {
+    height: 45%;
+  }
+  56% {
+    height: 44%;
+  }
+  57% {
+    height: 43%;
+  }
+  58% {
+    height: 42%;
+  }
+  59% {
+    height: 41%;
+  }
+  60% {
+    height: 40%;
+  }
+  61% {
+    height: 39%;
+  }
+  62% {
+    height: 38%;
+  }
+  63% {
+    height: 37%;
+  }
+  64% {
+    height: 36%;
+  }
+  65% {
+    height: 35%;
+  }
+  66% {
+    height: 34%;
+  }
+  67% {
+    height: 33%;
+  }
+  68% {
+    height: 32%;
+  }
+  69% {
+    height: 31%;
+  }
+  70% {
+    height: 30%;
+  }
+  71% {
+    height: 29%;
+  }
+  72% {
+    height: 28%;
+  }
+  73% {
+    height: 27%;
+  }
+  74% {
+    height: 26%;
+  }
+  75% {
+    height: 25%;
+  }
+  76% {
+    height: 24%;
+  }
+  77% {
+    height: 23%;
+  }
+  78% {
+    height: 22%;
+  }
+  79% {
+    height: 21%;
+  }
+  80% {
+    height: 20%;
+  }
+  81% {
+    height: 19%;
+  }
+  82% {
+    height: 18%;
+  }
+  83% {
+    height: 17%;
+  }
+  84% {
+    height: 16%;
+  }
+  85% {
+    height: 15%;
+  }
+  86% {
+    height: 14%;
+  }
+  87% {
+    height: 13%;
+  }
+  88% {
+    height: 12%;
+  }
+  89% {
+    height: 11%;
+  }
+  90% {
+    height: 10%;
+  }
+  91% {
+    height: 9%;
+  }
+  92% {
+    height: 8%;
+  }
+  93% {
+    height: 7%;
+  }
+  94% {
+    height: 6%;
+  }
+  95% {
+    height: 5%;
+  }
+  96% {
+    height: 4%;
+  }
+  97% {
+    height: 3%;
+  }
+  98% {
+    height: 2%;
+  }
+  99% {
+    height: 1%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+.side {
+  width: 50%;
+  height: 100vh;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  background-color: #0c0c0c;
+}
+
+.home {
+  overflow: hidden;
+}
+.home main .text h5 {
+  font-family: "Pacifico", sans-serif;
+  color: #fafafa;
+}
+.home main .text h1 {
+  font-size: 6rem;
+  color: #fafafa;
+  font-weight: 700;
+}
+.home main .text span {
+  text-transform: none;
+  color: #0c0c0c;
+}
+.home main .text h2 {
+  font-size: 3.5rem;
+  color: rgba(203, 203, 203, 0.9058823529);
+  text-transform: capitalize;
+  font-weight: 700;
+  transform: translateX(20px);
+}
+.home main .text h2 span {
+  text-transform: none;
+  color: rgba(41, 43, 51, 0.8235294118);
+}
+.home main .text p {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #b8b8b8;
+  transform: translateX(4px);
+}
+.home main .text p span {
+  text-transform: none;
+  color: #1a1a1a;
+}
+@media (max-width: 768px) {
+  .home main .text {
+    text-align: center;
+  }
+  .home main .text h5 {
+    font-size: 0.9rem;
+  }
+  .home main .text h1 {
+    font-size: 3rem;
+    line-height: 1.7;
+  }
+  .home main .text h2 {
+    font-size: 1.6rem;
+    transform: translate(10px);
+  }
+  .home main .text p {
+    font-size: 0.8rem;
+  }
+}
+.home main .avatar {
+  width: 20rem;
+  height: 20rem;
+}
+
+@media (max-width: 480px) {
+  .medai {
+    flex-direction: row;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+    z-index: 60;
+    bottom: 0.5rem;
+  }
+  .medai:nth-child(2) > a:nth-child(3) > svg:nth-child(1),
+  .medai:nth-child(2) > a:nth-child(4) > svg:nth-child(1) {
+    color: #0c0c0c;
+  }
+  .medai:nth-child(2) > a:nth-child(3) > svg:nth-child(1):hover,
+  .medai:nth-child(2) > a:nth-child(4) > svg:nth-child(1):hover {
+    color: #fd2155;
+  }
+  .medai .line {
+    display: none;
+  }
+  .email {
+    display: none;
+  }
+}
+.medai {
+  position: fixed;
+  gap: 1.3rem;
+  z-index: 50;
+}
+.medai .line {
+  background-color: #a8b2d1;
+}
+.medai a {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.medai a svg {
+  color: #a8b2d1;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+  height: 100%;
+}
+.medai a:hover svg {
+  transform: translateY(-3px);
+  color: #fd2155;
+}
+
+.email {
+  position: fixed;
+  z-index: 50;
+}
+.email a {
+  font-size: 0.8rem;
+  color: #292b33;
+  letter-spacing: 1px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  letter-spacing: 0.1em;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+.email a:hover {
+  transform: translateY(3px);
+  color: #fd2155;
+  font-weight: 600;
+}
+.email .line {
+  background-color: #292b33;
+}
+
+.about,
+.contact {
+  background-color: #0c0c0c;
+  width: 100%;
+  height: 100vh;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.about main,
+.contact main {
+  width: 80%;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  z-index: 9;
+  justify-content: flex-start;
+}
+.about main .box,
+.contact main .box {
+  border: solid 5px #fafafa;
+  position: relative;
+  top: 5rem;
+  left: 4rem;
+  width: 65%;
+  height: 85%;
+  display: flex;
+  align-items: flex-start;
+  padding: 7% 5%;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .about main .box,
+  .contact main .box {
+    left: 0;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.about main .box p,
+.contact main .box p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 52px;
+  /* or 193% */
+  letter-spacing: 0.01em;
+  color: #fafafa;
+}
+@media (max-width: 768px) {
+  .about main .box p,
+  .contact main .box p {
+    font-size: 1rem;
+    line-height: 32px;
+  }
+}
+.about main h2,
+.contact main h2 {
+  position: absolute;
+  font-weight: 800;
+  font-size: 8rem;
+  line-height: 156px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(213, 213, 213, 0.14);
+}
+@media (max-width: 768px) {
+  .about main h2,
+  .contact main h2 {
+    font-size: 6rem;
+  }
+}
+.about .img,
+.contact .img {
+  position: absolute;
+  right: 0;
+  transform: matrix(-0.92, -0.39, -0.39, 0.92, 0, 0);
+}
+@media (max-width: 768px) {
+  .about .img,
+  .contact .img {
+    bottom: 0 !important;
+    width: 80%;
+    transform: rotateY(180deg) translateY(5rem);
+  }
+}
+.about .email a,
+.contact .email a {
+  color: #a8b2d1;
+}
+.about .email a:hover,
+.contact .email a:hover {
+  color: #fd2155;
+  font-weight: 600;
+}
+.about .email .line,
+.contact .email .line {
+  background-color: #a8b2d1;
+}
+
+.skills,
+.work {
+  background-color: #fafafa;
+  width: 100%;
+  height: 100vh;
+  color: #0c0c0c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .skills,
+  .work {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.skills main,
+.work main {
+  width: 80%;
+  position: relative;
+  height: 83vh;
+  color: #0c0c0c;
+  display: flex;
+  align-items: flex-start;
+  z-index: 9;
+  justify-content: flex-start;
+  padding: 2rem 8rem;
+  gap: 3rem;
+}
+@media (max-width: 768px) {
+  .skills main,
+  .work main {
+    padding: 2rem 1rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 0rem;
+    width: 90%;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+}
+.skills main .box,
+.work main .box {
+  border: solid 5px #0c0c0c;
+  position: relative;
+  height: 100%;
+  padding: 3%;
+  width: 50%;
+  min-width: 15rem;
+}
+.skills main .box img,
+.work main .box img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-height: 100%;
+}
+.skills main .box .imghand,
+.work main .box .imghand {
+  overflow: hidden;
+  max-height: 12rem;
+  width: 100%;
+  border-radius: 10px;
+}
+@media (max-width: 480px) {
+  .skills main .box .imghand,
+  .work main .box .imghand {
+    max-height: 14rem;
+  }
+}
+@media (max-width: 768px) {
+  .skills main .box,
+  .work main .box {
+    left: 0;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 2rem;
+  }
+}
+.skills main .box .text > div,
+.work main .box .text > div {
+  letter-spacing: 0.01em;
+  font-weight: 500;
+}
+.skills main .box h3,
+.work main .box h3 {
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin-bottom: 1.5rem;
+}
+.skills main .box h4,
+.work main .box h4 {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.skills main .box p,
+.work main .box p {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 28px;
+  /* or 193% */
+  letter-spacing: 0.01em;
+  color: #0c0c0c;
+}
+.skills h2,
+.work h2 {
+  position: absolute;
+  font-weight: 800;
+  font-size: 8rem;
+  right: 0;
+  z-index: 1;
+  bottom: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(66, 66, 66, 0.14);
+}
+@media (max-width: 480px) {
+  .skills h2,
+  .work h2 {
+    font-size: 6rem;
+  }
+}
+.skills .medai .line,
+.work .medai .line {
+  background-color: #0c0c0c;
+}
+.skills .medai svg,
+.work .medai svg {
+  color: #0c0c0c;
+}
+.skills .email,
+.work .email {
+  z-index: 5;
+}
+.skills .email a,
+.work .email a {
+  color: #0c0c0c;
+}
+.skills .email a:hover,
+.work .email a:hover {
+  color: #fd2155;
+  font-weight: 600;
+}
+.skills .email .line,
+.work .email .line {
+  background-color: #0c0c0c;
+}
+
+.work {
+  background-color: #0c0c0c;
+  color: #fafafa;
+  max-width: 100%;
+  height: 100vh;
+  border: none;
+  overflow: hidden;
+}
+.work .splide {
+  max-width: 100%;
+}
+.work main {
+  max-width: 100%;
+  padding: 2rem 4rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0rem;
+}
+.work main h5 {
+  color: #fafafa;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 0.4rem;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+}
+.work main h5 svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+@media (max-width: 768px) {
+  .work main {
+    padding: 2rem 0rem;
+    width: 90%;
+    margin-top: 5rem;
+    flex-direction: column;
+  }
+}
+.work main:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.work main svg {
+  color: white;
+}
+.work main .box {
+  background-color: #fafafa;
+  width: 25rem;
+  border: none;
+  padding: 1rem;
+  color: #0c0c0c;
+  border-radius: 80px 0px;
+}
+@media (max-width: 768px) {
+  .work main .box {
+    width: 100%;
+    min-width: 90%;
+  }
+}
+.work main .box .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.work main .box img {
+  border-radius: 80px 0px 0 0;
+  height: 100%;
+  max-height: 100%;
+}
+.work main .box h3 {
+  margin-bottom: 1rem;
+}
+.work main .box .line {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(168, 168, 168, 0.753);
+}
+.work main .box p {
+  font-size: 0.9rem;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #0c0c0c;
+}
+.work main .box .tags {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+.work main .box .tags span {
+  color: rgba(61, 61, 61, 0.9098039216);
+  font-weight: 400;
+}
+.work main .box .tags span::before {
+  content: "#";
+  color: rgba(61, 61, 61, 0.9098039216);
+  font-size: 1.1rem;
+  margin-right: 0.2rem;
+  font-family: "Pacifico", sans-serif;
+}
+.work main .box .foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.work main .box .foot .git {
+  width: 50%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: start;
+  transition: all ease-in 0.5s;
+}
+.work main .box .foot .git svg {
+  height: 100%;
+  color: #0c0c0c;
+  width: 2.5rem;
+}
+.work main .box .foot .git svg:hover {
+  color: #fd2155;
+}
+.work main .box .foot .live {
+  background-color: #0c0c0c;
+  width: 50%;
+  height: 4rem;
+  border-radius: 0px 0px 80px 0;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  transition: 0.5s all ease-in;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.work main .box .foot .live:hover {
+  color: #fafafa;
+  box-shadow: inset 22rem 0 0 0 #fd2155 !important;
+}
+.work .medai .line {
+  background-color: #a8b2d1;
+}
+.work .medai svg {
+  color: #a8b2d1;
+}
+.work .email {
+  z-index: 60;
+}
+.work .email a {
+  color: #a8b2d1;
+}
+.work .email a:hover {
+  color: #fd2155;
+  font-weight: 600;
+}
+.work .email .line {
+  background-color: #a8b2d1;
+}
+
+.contact {
+  z-index: 4;
+}
+.contact main {
+  align-items: center;
+}
+.contact h2 {
+  position: relative !important;
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 120px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: rgba(213, 213, 213, 0.14) !important;
+  top: -1rem;
+  text-align: start;
+  width: 100%;
+  margin-bottom: 2rem;
+  transition: all 1s ease-in;
+}
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 4rem !important;
+    line-height: 32px;
+  }
+}
+.contact .hand1,
+.contact .hand2 {
+  width: 48%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .contact .hand1,
+  .contact .hand2 {
+    width: 100%;
+  }
+}
+.contact input,
+.contact #message {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+  padding: 1rem 1rem;
+  width: 100% !important;
+  height: 100% !important;
+}
+.contact input::-moz-placeholder,
+.contact #message::-moz-placeholder {
+  color: #c1c1c1;
+}
+.contact input:-ms-input-placeholder,
+.contact #message:-ms-input-placeholder {
+  color: #c1c1c1;
+}
+.contact input::placeholder,
+.contact #message::placeholder {
+  color: #c1c1c1;
+}
+.contact input:focus + .underlineAnime,
+.contact #message:focus + .underlineAnime {
+  width: 100%;
+}
+.contact .nah {
+  height: 10rem;
+  max-height: 30rem;
+  min-width: 100%;
+  position: relative;
+}
+.contact .underlineAnime {
+  background-color: #fd2155;
+  display: inline-block;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  transition: all 0.5s linear;
+}
+.contact img {
+  z-index: -2;
+}
+.contact .handllar {
+  flex-wrap: wrap;
+}
+.contact .handllar input {
+  width: 48%;
+}
+@media (max-width: 768px) {
+  .contact .handllar input {
+    width: 100%;
+  }
+}
+.contact form {
+  width: 100%;
+} /*# sourceMappingURL=main.css.map */

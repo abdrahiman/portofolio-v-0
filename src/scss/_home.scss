@@ -1,0 +1,147 @@
+.side {
+  width: 50%;
+  height: 100vh;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  background-color: $b-color;
+}
+.home {
+  main {
+    .text {
+      h5 {
+        font-family: $sc-font;
+        color: $w-color;
+      }
+      h1 {
+        font-size: 6rem;
+        color: $w-color;
+        // margin: 0;
+        font-weight: 700;
+      }
+      span {
+        text-transform: none;
+        color: $b-color;
+      }
+      h2 {
+        font-size: 3.5rem;
+        color: #cbcbcbe7;
+        text-transform: capitalize;
+        font-weight: 700;
+        transform: translateX(20px);
+        // letter-spacing: 0.3rem;
+        span {
+          text-transform: none;
+          color: #292b33d2;
+        }
+      }
+      p {
+        font-size: 1rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: #b8b8b8;
+        transform: translateX(4px);
+        // letter-spacing: 0.3rem;
+        span {
+          text-transform: none;
+          color: #1a1a1a;
+        }
+      }
+      @media ($m-md) {
+        text-align: center;
+        h5 {
+          font-size: 0.9rem;
+        }
+        h1 {
+          font-size: 3rem;
+          line-height: 1.7;
+        }
+        h2 {
+          font-size: 1.6rem;
+          transform: translate(10px);
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    .avatar {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+  overflow: hidden;
+}
+
+@media ($m-mb) {
+  // & {
+  //   margin: 6rem 0 0;
+  // }
+  .medai {
+    flex-direction: row;
+    // position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: fixed;
+    z-index: 60;
+    bottom: 0.5rem;
+    &:nth-child(2) > a:nth-child(3) > svg:nth-child(1),
+    &:nth-child(2) > a:nth-child(4) > svg:nth-child(1) {
+      color: $b-color;
+      &:hover {
+        color: $pr-color;
+      }
+    }
+    .line {
+      display: none;
+    }
+  }
+  .email {
+    display: none;
+  }
+}
+.medai {
+  position: fixed;
+  gap: 1.3rem;
+  z-index: 50;
+  .line {
+    background-color: #a8b2d1;
+  }
+  a {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    svg {
+      color: #a8b2d1;
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+      width: 100%;
+      height: 100%;
+    }
+    &:hover {
+      svg {
+        transform: translateY(-3px);
+        color: $pr-color;
+      }
+    }
+  }
+}
+.email {
+  position: fixed;
+  z-index: 50;
+  a {
+    font-size: 0.8rem;
+    color: #292b33;
+    letter-spacing: 1px;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    letter-spacing: 0.1em;
+    writing-mode: vertical-rl;
+    &:hover {
+      transform: translateY(3px);
+      color: $pr-color;
+      font-weight: 600;
+    }
+  }
+  .line {
+    background-color: #292b33;
+  }
+}
