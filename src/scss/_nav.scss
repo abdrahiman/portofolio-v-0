@@ -93,12 +93,14 @@ nav {
   animation-fill-mode: forwards;
   padding-right: 8%;
   @media ($m-mb) {
+    flex-direction: row;
     padding: 0;
     left: 0;
-    gap: 70px;
-    justify-content: flex-start;
+    gap: 7%;
+    justify-content: center;
+    overflow-y: auto;
+    height: 80%;
     align-items: center;
-    flex-direction: column;
   }
   ul {
     padding: 0;

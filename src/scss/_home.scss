@@ -54,20 +54,23 @@
         }
         h1 {
           font-size: 3rem;
-          line-height: 1.7;
+          line-height: 1.5;
         }
         h2 {
-          font-size: 1.6rem;
+          font-size: 1.5rem;
           transform: translate(10px);
         }
         p {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
         }
       }
     }
     .avatar {
       width: 20rem;
       height: 20rem;
+      @media ($m-mb) {
+        height: 14rem;
+      }
     }
   }
   overflow: hidden;

@@ -17,8 +17,9 @@ export default function Skills() {
       <main>
         <Splide
           options={{
+            arrows: false,
+            arrowPath: false,
             gap: "1rem",
-            lazyLoad: true,
             perPage: 2,
             drag: "free",
             breakpoints: {

@@ -13,7 +13,7 @@ function App() {
   let loc = useLocation();
   let [intro, setintro] = useState(true);
   function rendering() {
-    setTimeout(() => setintro(false), 3000);
+    setTimeout(() => setintro(false), 4000);
   }
   useEffect(() => rendering(), []);
   return (

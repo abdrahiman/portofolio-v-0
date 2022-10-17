@@ -15,6 +15,14 @@
     align-items: flex-start;
     z-index: 9;
     justify-content: flex-start;
+    overflow: hidden;
+    @media ($m-mb) {
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      overflow: hidden;
+      overflow-y: auto;
+    }
     .box {
       border: solid 5px $w-color;
       position: relative;
@@ -64,10 +72,12 @@
     transform: matrix(-0.92, -0.39, -0.39, 0.92, 0, 0);
     // top: 20%;
     @media ($m-md) {
+      transform: none !important;
       bottom: 0 !important;
       width: 80%;
+      display: none !important;
       // z-index: 34;
-      transform: rotateY(180deg) translateY(5rem);
+      // transform: rotateY(180deg) translateY(5rem);
     }
     // display: none;
   }

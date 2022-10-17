@@ -58,7 +58,7 @@
   .underlineAnime {
     background-color: $pr-color;
     display: inline-block;
-    height: 5px;
+    height: 4px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -70,6 +70,9 @@
   }
   img {
     z-index: -2;
+    @media ($m-mb) {
+      display: none;
+    }
   }
   z-index: 4;
   .handllar {

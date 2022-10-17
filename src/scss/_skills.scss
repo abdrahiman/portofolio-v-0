@@ -6,7 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden !important;
   @media ($m-md) {
+    overflow-y: scroll;
     height: fit-content;
   }
   main {
@@ -55,6 +57,9 @@
         width: 100%;
         height: fit-content;
         margin-bottom: 2rem;
+        .text > div {
+          font-size: 0.9rem;
+        }
       }
       .text > div {
         letter-spacing: 0.01em;
@@ -81,12 +86,18 @@
         letter-spacing: 0.01em;
         color: $b-color;
       }
+      @media ($m-mb) {
+        p {
+          font-size: 0.9rem;
+        }
+      }
     }
   }
   h2 {
     position: absolute;
     font-weight: 800;
     font-size: 8rem;
+    line-height: 3rem;
     right: 0;
     z-index: 1;
     bottom: 0;
