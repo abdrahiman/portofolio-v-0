@@ -1,5 +1,5 @@
-import Img from "../assest/26a179ba89e9421b9b389566a2aae379.png";
-import Img2 from "../assest/ezgif-2-67a9b2b23e.png";
+import Img from "../imgs/26a179ba89e9421b9b389566a2aae379.png";
+import Img2 from "../imgs/ezgif-2-67a9b2b23e.png";
 import Sides from "./sides";
 
 import { motion } from "framer-motion";

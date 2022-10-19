@@ -47,7 +47,7 @@ button.main {
     border-color: $w-color;
     &:hover {
       color: $pr-color;
-      box-shadow: inset 7.5em 0 0 0 $w-color !important;
+      box-shadow: inset 8em 0 0 0 $w-color !important;
     }
   }
   @media ($m-mb) {

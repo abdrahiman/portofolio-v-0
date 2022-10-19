@@ -1,4 +1,4 @@
-import Img from "../assest/image_processing20210728-21422-80psll-removebg-preview.png";
+import Img from "../imgs/image_processing20210728-21422-80psll-removebg-preview.png";
 import Sides from "./sides";
 import { motion } from "framer-motion";
 
@@ -34,8 +34,8 @@ export default function About() {
         src={Img}
         alt=""
         className="img"
-        animate={{ translateY: "-4rem", rotate: 15, rotateY: 170 }}
-        initial={{ translateY: "0rem", rotate: 0, rotateY: 180 }}
+        animate={{ translateY: "-4rem" }}
+        initial={{ translateY: "0rem" }}
         transition={{
           duration: 3,
           repeat: Infinity,

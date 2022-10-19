@@ -5,7 +5,7 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
-import Logo from "../assest/Group 20.svg";
+import Logo from "../imgs/Group 20.svg";
 import { Link } from "react-router-dom";
 export default function Nav() {
   let [isNav, setNav] = useState(false);
@@ -125,7 +125,11 @@ export default function Nav() {
       </div>
       <nav className="flex w-full h-16 flex-row items-center justify-between">
         <Link to={"/"}>
-          <div className="name" onClick={isNav ? navTogelle : () => {}}>
+          <div
+            className="name"
+            id={isreal ? "changb" : ""}
+            onClick={!isnone ? navTogelle : () => {}}
+          >
             A B
           </div>
         </Link>

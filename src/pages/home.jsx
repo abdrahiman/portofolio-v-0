@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import Avatar from "../assest/Group 27(1).svg";
+import Avatar from "../imgs/Group 27(1).svg";
 import { motion } from "framer-motion";
 import Sides from "./sides";
 

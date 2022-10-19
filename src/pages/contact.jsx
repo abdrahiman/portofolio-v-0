@@ -1,31 +1,29 @@
-import Img from "../assest/image_processing20210728-21422-80psll-removebg-preview 1.png";
+import Img from "../imgs/3d-art-google-partners.jpg.pagespeed.ce.ylqz3X95EW-removebg-preview.png";
 import { FiInstagram, FiGithub, FiCodepen, FiTwitter } from "react-icons/fi";
-import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Sides from "./sides";
 
 export default function About() {
-  // const [name, setName] = useState("");
-  // const [mail, setMail] = useState("");
-  // const [msg, setMsg] = useState("");
-  // const [alr, setalr] = useState(false);
-  // function formCheck(ev) {
-  //   setalr(true);
-  //   ev.preventDefault();
-  // }
   return (
     <motion.div exit={{ opacity: 0 }} className="contact relative">
       <Sides />
       <main>
         <form
           action=""
+          // onSubmit={(ev) => ev.preventDefault()}
           className="flex flex-col justify-around gap-5 items-end "
-          onSubmit={(ev) => ev.preventDefault()}
+          // this proprty for save data in netlify hosting  :
           netlify
         >
-          <h2>contact</h2>
-          {/* {alr && console.log("render")} */}
-
+          <h2>
+            <span>c</span>
+            <span>o</span>
+            <span>n</span>
+            <span>t</span>
+            <span>a</span>
+            <span>c</span>
+            <span>t</span>
+          </h2>
           <div className="flex handllar flex-row justify-between gap-4 items-start">
             <div className="hand1">
               <input type="text" placeholder="name" />
@@ -52,7 +50,9 @@ export default function About() {
             Submit
           </button>
         </form>
-        <img src={Img} alt="" />
+        <div className="conImg">
+          <img src={Img} className="w-full h-full" alt="" />
+        </div>
       </main>
     </motion.div>
   );

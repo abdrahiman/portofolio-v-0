@@ -34,7 +34,7 @@ button.main#change {
 }
 button.main#change:hover {
   color: #7510f7;
-  box-shadow: inset 7.5em 0 0 0 #fafafa !important;
+  box-shadow: inset 8em 0 0 0 #fafafa !important;
 }
 @media (max-width: 480px) {
   button.main {
@@ -93,12 +93,19 @@ nav {
   top: 0;
   left: 0;
   z-index: 100;
-  padding: 0 10%;
+  padding: 0 8%;
 }
 nav .name {
   font-family: "Pacifico", sans-serif;
   color: #fafafa;
   font-size: 1.3rem;
+  background-color: #0c0c0c;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0px 80px 80px 0px;
+}
+nav .name#changb {
+  background: transparent;
+  border-radius: 0px;
 }
 nav .toggel {
   position: absolute;
@@ -1833,10 +1840,11 @@ nav .toggel {
   font-weight: 500;
 }
 .skills main .box h3, .work main .box h3 {
-  font-weight: 700;
+  font-weight: 600;
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 0.01em;
+  font-size: 1.2;
   margin-bottom: 1.5rem;
 }
 .skills main .box h4, .work main .box h4 {
@@ -2068,29 +2076,42 @@ nav .toggel {
 }
 
 .contact {
+  background-color: #fafafa;
+  color: #0c0c0c;
   z-index: 4;
 }
 .contact main {
   align-items: center;
 }
+.contact form {
+  width: 100%;
+}
 .contact h2 {
   position: relative !important;
-  font-weight: 800;
-  font-size: 5rem;
+  font-weight: 700;
+  font-size: 4.5rem;
   line-height: 120px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: rgba(213, 213, 213, 0.14) !important;
+  -webkit-text-stroke: #7510f7 2px;
+  opacity: 0.8;
   top: -1rem;
   text-align: start;
   width: 100%;
   margin-bottom: 2rem;
-  transition: all 1s ease-in;
+}
+.contact h2 span:hover {
+  color: #7510f7;
+  transform: translateY(-3px);
+}
+.contact h2 span {
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 @media (max-width: 480px) {
   .contact h2 {
-    font-size: 4rem !important;
+    font-size: 3.5rem !important;
     line-height: 32px;
+    top: 3rem;
   }
 }
 .contact .hand1,
@@ -2106,21 +2127,21 @@ nav .toggel {
 }
 .contact input,
 .contact #message {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(59, 59, 59, 0.2);
   outline: none;
   padding: 1rem 1rem;
   width: 100% !important;
   height: 100% !important;
 }
 .contact input::-moz-placeholder, .contact #message::-moz-placeholder {
-  color: #c1c1c1;
+  color: rgba(24, 24, 24, 0.527);
 }
 .contact input:-ms-input-placeholder, .contact #message:-ms-input-placeholder {
-  color: #c1c1c1;
+  color: rgba(24, 24, 24, 0.527);
 }
 .contact input::placeholder,
 .contact #message::placeholder {
-  color: #c1c1c1;
+  color: rgba(24, 24, 24, 0.527);
 }
 .contact input:focus + .underlineAnime,
 .contact #message:focus + .underlineAnime {
@@ -2142,11 +2163,17 @@ nav .toggel {
   width: 0%;
   transition: all 0.5s linear;
 }
-.contact img {
+.contact .conImg {
+  width: 100%;
+}
+.contact .conImg img {
   z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: rotateY(180deg);
 }
 @media (max-width: 480px) {
-  .contact img {
+  .contact .conImg img {
     display: none;
   }
 }
@@ -2161,6 +2188,19 @@ nav .toggel {
     width: 100%;
   }
 }
-.contact form {
-  width: 100%;
+.contact .medai .line {
+  background-color: rgb(68, 68, 68);
+}
+.contact .medai svg {
+  color: rgb(68, 68, 68);
+}
+.contact .email a {
+  color: rgb(68, 68, 68);
+}
+.contact .email a:hover {
+  color: #7510f7;
+  font-weight: 600;
+}
+.contact .email .line {
+  background-color: rgb(68, 68, 68);
 }/*# sourceMappingURL=main.css.map */

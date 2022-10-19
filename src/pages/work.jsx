@@ -3,10 +3,10 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
-import Img from "../assest/26a179ba89e9421b9b389566a2aae379.png";
-import Img1 from "../assest/Rectangle 10.jpg";
-import Img2 from "../assest/Group 40.png";
-import Img3 from "../assest/Group 21 (1).jpg";
+import Img from "../imgs/26a179ba89e9421b9b389566a2aae379.png";
+import Img1 from "../imgs/Rectangle 10.jpg";
+import Img2 from "../imgs/Group 40.png";
+import Img3 from "../imgs/Group 21 (1).jpg";
 import Sides from "./sides";
 
 export default function Skills() {

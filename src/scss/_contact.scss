@@ -1,29 +1,40 @@
 .contact {
   @extend .about;
+  background-color: $w-color;
+  color: $b-color;
   main {
     align-items: center;
+  }
+  form {
+    width: 100%;
   }
 
   h2 {
     position: relative !important;
-    font-weight: 800;
-    font-size: 5rem;
+    font-weight: 700;
+    font-size: 4.5rem;
     line-height: 120px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: rgba(213, 213, 213, 0.14) !important;
     // color: $pr-color !important;
+    -webkit-text-stroke: $pr-color 2px;
+    opacity: 0.8;
+    // color: rgba(59, 59, 59, 0.438) !important;
+    span:hover {
+      color: $pr-color;
+      transform: translateY(-3px);
+    }
     top: -1rem;
     text-align: start;
     width: 100%;
-    // font-family: $sc-font;
     margin-bottom: 2rem;
-    transition: all 1s ease-in;
-
-    // -webkit-text-stroke: 1px red;
+    span {
+      transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
     @media ($m-mb) {
-      font-size: 4rem !important;
+      font-size: 3.5rem !important;
       line-height: 32px;
+      top: 3rem;
     }
   }
   .hand1,
@@ -36,13 +47,14 @@
   }
   input,
   #message {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(59, 59, 59, 0.2);
     outline: none;
     padding: 1rem 1rem;
     width: 100% !important;
     height: 100% !important;
+
     &::placeholder {
-      color: #c1c1c1;
+      color: rgba(24, 24, 24, 0.527);
     }
     &:focus + .underlineAnime {
       // transform: scale(1);
@@ -68,10 +80,15 @@
     width: 0%;
     transition: all 0.5s linear;
   }
-  img {
-    z-index: -2;
-    @media ($m-mb) {
-      display: none;
+  .conImg {
+    width: 100%;
+    img {
+      z-index: -2;
+      object-fit: cover;
+      transform: rotateY(180deg);
+      @media ($m-mb) {
+        display: none;
+      }
     }
   }
   z-index: 4;
@@ -84,7 +101,24 @@
       }
     }
   }
-  form {
-    width: 100%;
+  .medai {
+    .line {
+      background-color: rgb(68, 68, 68);
+    }
+    svg {
+      color: rgb(68, 68, 68);
+    }
+  }
+  .email {
+    a {
+      color: rgb(68, 68, 68);
+      &:hover {
+        color: $pr-color;
+        font-weight: 600;
+      }
+    }
+    .line {
+      background-color: rgb(68, 68, 68);
+    }
   }
 }

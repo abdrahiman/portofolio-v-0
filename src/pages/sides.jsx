@@ -10,10 +10,10 @@ export default function Sides() {
         <a href="https://twitter.com/abderrahim812">
           <FiTwitter />
         </a>
-        <a href="">
+        <a href="https://codepen.io/abderrahim0">
           <FiCodepen />
         </a>
-        <a href="">
+        <a href="https://instagram/abderrahim0">
           <FiInstagram />
         </a>
         <span className="line mt-2 w-0.5 h-24 "></span>
