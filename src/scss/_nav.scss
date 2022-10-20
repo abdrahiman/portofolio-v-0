@@ -9,12 +9,8 @@ nav {
     color: $w-color;
     font-size: 1.3rem;
     &#changb {
-      background: transparent;
-      border-radius: 0px;
+      color: $b-color;
     }
-    background-color: $b-color;
-    padding: 0.1rem 0.4rem;
-    border-radius: 0px 80px 80px 0px;
   }
   .toggel {
     position: absolute;

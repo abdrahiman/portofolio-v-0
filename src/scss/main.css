@@ -99,13 +99,9 @@ nav .name {
   font-family: "Pacifico", sans-serif;
   color: #fafafa;
   font-size: 1.3rem;
-  background-color: #0c0c0c;
-  padding: 0.1rem 0.4rem;
-  border-radius: 0px 80px 80px 0px;
 }
 nav .name#changb {
-  background: transparent;
-  border-radius: 0px;
+  color: #0c0c0c;
 }
 nav .toggel {
   position: absolute;
@@ -2085,6 +2081,32 @@ nav .toggel {
 }
 .contact form {
   width: 100%;
+}
+.contact .popCon {
+  z-index: 80 !important;
+}
+.contact .popBg {
+  pointer-events: none !important;
+  filter: blur(10px);
+  background: rgba(0, 0, 0, 0.288);
+}
+.contact .popBg2 {
+  background: transparent;
+  position: absolute;
+}
+.contact .pop {
+  z-index: 81 !important;
+  transition: 1s all ease-in-out;
+}
+.contact .pop svg {
+  width: 4rem;
+  height: 3rem;
+}
+.contact .pop h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #0c0c0c;
+  font-weight: 500;
 }
 .contact h2 {
   position: relative !important;

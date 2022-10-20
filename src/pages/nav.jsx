@@ -7,7 +7,7 @@ import {
 import { BsFacebook } from "react-icons/bs";
 import Logo from "../imgs/Group 20.svg";
 import { Link } from "react-router-dom";
-export default function Nav() {
+export default function Nav(props) {
   let [isNav, setNav] = useState(false);
   let [isreal, setreal] = useState(false);
   let [ishide, sethide] = useState(false);
@@ -127,7 +127,13 @@ export default function Nav() {
         <Link to={"/"}>
           <div
             className="name"
-            id={isreal ? "changb" : ""}
+            id={
+              props.change === "/contact" || props.change === "/skills"
+                ? isnone
+                  ? "changb"
+                  : ""
+                : ""
+            }
             onClick={!isnone ? navTogelle : () => {}}
           >
             A B

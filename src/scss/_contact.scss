@@ -8,7 +8,33 @@
   form {
     width: 100%;
   }
-
+  .popCon {
+    // filter: blur(10px);
+    z-index: 80 !important;
+  }
+  .popBg {
+    pointer-events: none !important;
+    filter: blur(10px);
+    background: rgba(0, 0, 0, 0.288);
+  }
+  .popBg2 {
+    background: transparent;
+    position: absolute;
+  }
+  .pop {
+    z-index: 81 !important;
+    transition: 1s all ease-in-out;
+    svg {
+      width: 4rem;
+      height: 3rem;
+    }
+    h3 {
+      font-size: 1.2rem;
+      text-transform: capitalize;
+      color: $b-color;
+      font-weight: 500;
+    }
+  }
   h2 {
     position: relative !important;
     font-weight: 700;

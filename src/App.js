@@ -24,7 +24,7 @@ function App() {
             <img src={Intro} alt="" />
           </div>
         )}
-        <Nav />
+        <Nav change={loc.pathname} />
         <Routes location={loc} key={loc.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/about/" element={<About />} />
