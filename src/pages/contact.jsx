@@ -44,7 +44,7 @@ export default function About() {
           <div class="modal-overlay popBg absolute w-full h-full"></div>
           <div class="modal-container pop bg-white w-11/12 md:max-w-md mx-auto shadow-lg  overflow-y-auto">
             <div class="modal-content py-12 text-center px-22 flex flex-col justify-center items-center gap-3">
-              <IoCheckmarkDoneCircleSharp width="4" fill="#7510f7" height="4" />
+              <IoCheckmarkDoneCircleSharp fill="#7510f7" />
               <h3 class="text-center">the form is send successfuly</h3>
               <button
                 class="modal-close main "

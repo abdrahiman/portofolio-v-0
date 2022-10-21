@@ -3,13 +3,39 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/core";
-import Img from "../imgs/26a179ba89e9421b9b389566a2aae379.png";
 import Img1 from "../imgs/Rectangle 10.jpg";
 import Img2 from "../imgs/Group 40.png";
 import Img3 from "../imgs/Group 21 (1).jpg";
 import Sides from "./sides";
+import { useState } from "react";
 
 export default function Skills() {
+  let [projects] = useState([
+    {
+      img: Img1,
+      title: "find trend",
+      des: "this a lannding page for a fake socaity about finding trends anywhere",
+      tags: ["HTML", "CSS", "Js"],
+      gitUrl: "/",
+      liveUrl: "findtrend-landing.netlify.app",
+    },
+    {
+      img: Img2,
+      title: "eXStore",
+      des: "a landing page for a games store",
+      tags: ["HTML", "SCSS", "Js", "bootstarp"],
+      gitUrl: "/",
+      liveUrl: "/",
+    },
+    {
+      img: Img3,
+      title: "Fodo",
+      des: "a landing page for a food restarent",
+      tags: ["HTML", "CSS"],
+      gitUrl: "/",
+      liveUrl: "/",
+    },
+  ]);
   return (
     <motion.div className="work relative" exit={{ opacity: 0 }}>
       <Sides />
@@ -30,164 +56,36 @@ export default function Skills() {
             },
           }}
         >
-          <SplideSlide>
-            <motion.div
-              animate={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="box flex items-start justify-start gap-1 flex-col"
-            >
-              <img src={Img1} alt="" />
-              <div className="text">
-                <h3>find trend</h3>
-                <p className="des">
-                  this a lannding page for a fake socaity about finding trends
-                  anywhere
-                </p>
-                <div className="line"></div>
-                <div className="tags">
-                  <span>Html</span>
-                  <span>Scss</span>
-                  <span>Js</span>
+          {projects.forEach((project) => (
+            <SplideSlide>
+              <motion.div
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="box flex items-start justify-start gap-1 flex-col"
+              >
+                <img src={project.img} alt="" />
+                <div className="text">
+                  <h3>{project.title}</h3>
+                  <p className="des">{project.des}</p>
+                  <div className="line"></div>
+                  <div className="tags">
+                    {project.tags.map((tag) => (
+                      <span>{tag}</span>
+                    ))}
+                  </div>
+                  <div className="foot">
+                    <a className="git" href={project.gitUrl}>
+                      <AiOutlineGithub />
+                    </a>
+                    <a className="live" href={project.liveUrl}>
+                      Visit
+                    </a>
+                  </div>
                 </div>
-                <div className="foot">
-                  <a
-                    className="git"
-                    href="https://github.com/abderrahim101/find-trend"
-                  >
-                    <AiOutlineGithub />
-                  </a>
-                  <a className="live" href="findtrend-landing.netlify.app">
-                    Visit
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          </SplideSlide>
-          <SplideSlide>
-            <motion.div
-              animate={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="box flex items-start justify-start gap-1 flex-col"
-            >
-              <img src={Img2} alt="" />
-              <div className="text">
-                <h3>eXstore</h3>
-                <p className="des">a landing page for a games store</p>
-                <div className="line"></div>
-                <div className="tags">
-                  <span>Html</span>
-                  <span>Css</span>
-                  <span>Bootstrap</span>
-                </div>
-                <div className="foot">
-                  <a
-                    className="git"
-                    href="https://github.com/abderrahim101/eXStore"
-                  >
-                    <AiOutlineGithub />
-                  </a>
-                  <a className="live" href="exstore.netlify.app">
-                    Visit
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          </SplideSlide>
-          <SplideSlide>
-            <motion.div
-              animate={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="box flex items-start justify-start gap-1 flex-col"
-            >
-              <img src={Img3} alt="" />
-              <div className="text">
-                <h3>front end developer</h3>
-                <p className="des">
-                  It is build on top of the bl blbn bl React JS, with
-                  styledComponents .
-                </p>
-                <div className="line"></div>
-                <div className="tags">
-                  <span>Html</span>
-                  <span>Api</span>
-                  <span>React</span>
-                </div>
-                <div className="foot">
-                  <a className="git">
-                    <AiOutlineGithub />
-                  </a>
-                  <a className="live" href="/">
-                    Visit
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          </SplideSlide>
-          <SplideSlide>
-            <motion.div
-              animate={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="box flex items-start justify-start gap-1 flex-col"
-            >
-              <img src={Img} alt="" />
-              <div className="text">
-                <h3>front end developer</h3>
-                <p className="des">
-                  It is build on top of the bl blbn bl React JS, with
-                  styledComponents .
-                </p>
-                <div className="line"></div>
-                <div className="tags">
-                  <span>Html</span>
-                  <span>Api</span>
-                  <span>React</span>
-                </div>
-                <div className="foot">
-                  <a className="git">
-                    <AiOutlineGithub />
-                  </a>
-                  <a className="live" href="/">
-                    Visit
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          </SplideSlide>
-          <SplideSlide>
-            <motion.div
-              animate={{ opacity: 1 }}
-              initial={{ opacity: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="box flex items-start justify-start gap-1 flex-col"
-            >
-              <img src={Img} alt="" />
-              <div className="text">
-                <h3>front end developer</h3>
-                <p className="des">
-                  It is build on top of the bl blbn bl React JS, with
-                  styledComponents .
-                </p>
-                <div className="line"></div>
-                <div className="tags">
-                  <span>Html</span>
-                  <span>Api</span>
-                  <span>React</span>
-                </div>
-                <div className="foot">
-                  <a className="git">
-                    <AiOutlineGithub />
-                  </a>
-                  <a className="live" href="/">
-                    Visit
-                  </a>
-                </div>
-              </div>
-            </motion.div>
-          </SplideSlide>
+              </motion.div>
+            </SplideSlide>
+          ))}
         </Splide>
         <h5>
           grap to see more <BiRightArrowAlt />
