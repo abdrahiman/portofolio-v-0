@@ -85,10 +85,10 @@ export default function Skills() {
                     ))}
                   </div>
                   <div className="foot">
-                    <a className="git" href={project.gitUrl}>
+                    <a className="git" target="_blank" href={project.gitUrl}>
                       <AiOutlineGithub />
                     </a>
-                    <a className="live" href={project.liveUrl}>
+                    <a className="live" target="_blank" href={project.liveUrl}>
                       Visit
                     </a>
                   </div>
