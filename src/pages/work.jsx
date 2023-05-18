@@ -6,33 +6,43 @@ import "@splidejs/react-splide/css/core";
 import Img1 from "../imgs/Rectangle 10.jpg";
 import Img2 from "../imgs/Group 40.png";
 import Img3 from "../imgs/Group 21 (1).jpg";
+import Img0 from "../imgs/Screenshot 2023-05-18 091500.png";
+
 import Sides from "./sides";
 import { useState } from "react";
 
 export default function Skills() {
   let [projects] = useState([
     {
+      img: Img0,
+      title: "Hamesh Blog",
+      des: "my personal arabic blog to",
+      tags: ["React", "Next js", "tailwind", "mongoose"],
+      gitUrl: "https://github.com/iabderrahim/hamesh",
+      liveUrl: "https://haemsh.vercel.app",
+    },
+    {
       img: Img1,
       title: "find trend",
-      des: "this a lannding page for a fake socaity about finding trends anywhere",
+      des: "landing page",
       tags: ["HTML", "CSS", "Js"],
-      gitUrl: "/",
-      liveUrl: "findtrend-landing.netlify.app",
+      gitUrl: "https://github.com/iabderrahim/find-trend",
+      liveUrl: "https://findtrend-landing.netlify.app",
     },
     {
       img: Img2,
       title: "eXStore",
-      des: "a landing page for a games store",
+      des: "landing pages",
       tags: ["HTML", "SCSS", "Js", "bootstarp"],
-      gitUrl: "/",
+      gitUrl: "https://github.com/iabderrahim/eXStore",
       liveUrl: "/",
     },
     {
       img: Img3,
       title: "Fodo",
-      des: "a landing page for a food restarent",
+      des: "landing page",
       tags: ["HTML", "CSS"],
-      gitUrl: "/",
+      gitUrl: "https://github.com/iabderrahim/Food-Delivery-Landing-Page",
       liveUrl: "/",
     },
   ]);
@@ -56,7 +66,7 @@ export default function Skills() {
             },
           }}
         >
-          {projects.forEach((project) => (
+          {projects.map((project) => (
             <SplideSlide>
               <motion.div
                 animate={{ opacity: 1 }}
