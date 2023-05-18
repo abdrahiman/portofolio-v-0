@@ -4,7 +4,7 @@ import Sides from "./sides";
 import { useState } from "react";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
-export default function About() {
+export default function Contact() {
   let [name, setname] = useState("");
   let [msg, setmsg] = useState("");
   let [mail, setmail] = useState("");

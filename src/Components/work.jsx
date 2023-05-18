@@ -11,7 +11,7 @@ import Img0 from "../imgs/Screenshot 2023-05-18 091500.png";
 import Sides from "./sides";
 import { useState } from "react";
 
-export default function Skills() {
+export default function Work() {
   let [projects] = useState([
     {
       img: Img0,
@@ -48,7 +48,6 @@ export default function Skills() {
   ]);
   return (
     <motion.div className="work relative" exit={{ opacity: 0 }}>
-      <Sides />
       <h2>Work</h2>
       <main>
         <Splide

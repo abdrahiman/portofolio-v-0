@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 export default function Skills() {
   return (
     <motion.div className="skills relative" exit={{ opacity: 0 }}>
-      <Sides />
       <h2>Skills</h2>
       <main>
         <motion.div

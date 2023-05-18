@@ -1,7 +1,7 @@
 import Img from "../imgs/image_processing20210728-21422-80psll-removebg-preview.png";
 import Sides from "./sides";
 import { motion } from "framer-motion";
-
+Component;
 export default function About() {
   return (
     <motion.div exit={{ opacity: 0 }} className="about relative">

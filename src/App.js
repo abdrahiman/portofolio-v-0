@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Home from "./pages/home";
 import Nav from "./pages/nav";
-import Contact from "./pages/contact";
-import Work from "./pages/work";
-import About from "./pages/about";
-import Skills from "./pages/skills";
+
 import "./scss/main.css";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -27,10 +24,6 @@ function App() {
         <Nav change={loc.pathname} />
         <Routes location={loc} key={loc.pathname}>
           <Route path="/" element={<Home />} />
-          <Route path="/about/" element={<About />} />
-          <Route path="/skills/" element={<Skills />} />
-          <Route path="/work/" element={<Work />} />
-          <Route path="/contact/" element={<Contact />} />
         </Routes>
       </AnimatePresence>
     </div>

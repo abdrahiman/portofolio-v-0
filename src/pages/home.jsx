@@ -1,8 +1,11 @@
 import { React, useState, useEffect } from "react";
 import Avatar from "../imgs/Group 27(1).svg";
 import { motion } from "framer-motion";
-import Sides from "./sides";
-
+import Sides from "../Components/sides";
+import About from "../Components/about";
+import Work from "../Components/work";
+import Skills from "../Components/skills";
+import Contact from "../Components/contact";
 export default function Home() {
   return (
     <div className="">
@@ -34,6 +37,10 @@ export default function Home() {
           </motion.div>
         </main>
       </motion.div>
+      <About />
+      <Skills />
+      <Work />
+      <Contact />
     </div>
   );
 }
