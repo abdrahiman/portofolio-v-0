@@ -5,7 +5,7 @@ import Nav from "./Components/nav";
 import "./scss/main.css";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Intro from "./imgs/Your paragraph text.gif";
+import Intro from "../public/imgs/Your paragraph text.gif";
 function App() {
   let loc = useLocation();
   let [intro, setintro] = useState(true);
@@ -21,7 +21,7 @@ function App() {
             <img src={Intro} alt="" />
           </div>
         )}
-        <Nav change={loc.pathname} />
+        <Nav />
         <Routes location={loc} key={loc.pathname}>
           <Route path="/" element={<Home />} />
         </Routes>
