@@ -19,7 +19,7 @@ export default function Skills() {
       des: "my personal arabic blog to",
       tags: ["React", "Next js", "tailwind", "mongoose"],
       gitUrl: "https://github.com/iabderrahim/hamesh",
-      liveUrl: "https://haemsh.vercel.app",
+      liveUrl: "https://hamesh.vercel.app",
     },
     {
       img: Img1,
